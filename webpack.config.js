@@ -1,16 +1,17 @@
+var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
     devtool: 'source-map',
 
     entry: [
-        './src/App.js'     //с чего начинается приложение, с чего начинать сборку
+        './src/app.js'
     ],
 
     output: {
         path: path.join(__dirname, 'build'),
-        filename: 'bundle.js', //скомпиленный файл
-        publicPath: '/static/' //виртуальная папка
+        filename: 'bundle.js',
+        publicPath: '/static/'
     },
 
     module: {

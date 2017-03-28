@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+require('./../sass/style.scss');
+import Counter from './components/counter';
+import store from './store';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
 
 ReactDOM.render(
-    <h1>Hello!</h1>,
+    <Counter />,
     document.getElementById('counter')
 );

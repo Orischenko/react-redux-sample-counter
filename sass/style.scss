@@ -3,9 +3,39 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);
 
 body{
-  font:$font-family-base;
+  font: 15px $font-family-base;
   letter-spacing:.1px;
   color:$gray;
   background:$gray-lighter;
   margin:0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2{
+  font:60px $font-family-base;
+  color:$gray;
+  font-weight: 300;
+}
+
+.increment {
+  background-color: $blue-lighter;
+  font:600 14px $font-family-base;
+  padding: 15px 27px;
+  border: 2px solid $blue-lighter;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  margin-top: 20px;
+  display: inline-block;
+
+  &:hover {
+    background-color: transparent;
+    color: $blue-lighter;
+  }
 }
