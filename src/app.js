@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 require('./../sass/style.scss');
 import Counter from './components/counter';
 import store from './store';
-import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
+import { Provider } from 'react-redux'
 
 ReactDOM.render(
-    <Counter />,
+    <Provider store={ store }>
+        <Counter />
+    </Provider>,
     document.getElementById('counter')
 );

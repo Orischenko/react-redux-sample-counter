@@ -1,4 +1,4 @@
-import { INCREMENT } from '../constants';
+import { INCREMENT } from './../constants';
 
 export default (state = 0, action) => {
     const{ type } = action;

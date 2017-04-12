@@ -1,11 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import store from './../store';
 import { increment } from './../AC';
-import RaisedButtonExampleSimple from './button';
-
-const style = {
-    margin: 12,
-};
 
 export default class Counter extends Component{
     static PropTypes = {
@@ -17,7 +12,7 @@ export default class Counter extends Component{
     };
 
     componentDidMount() {
-        store.subscribe(this.handleStoreChange)
+        store.subscribe(this._handlerStoreChange)
     }
 
     render() {
@@ -25,8 +20,6 @@ export default class Counter extends Component{
             <div>
                 <h2>{ this.state.counter }</h2>
                 <a href="#!" className="increment" onClick={ this._handlerIncrement }>increment me</a>
-
-                <RaisedButtonExampleSimple />
             </div>
         );
     }
@@ -37,9 +30,9 @@ export default class Counter extends Component{
         store.dispatch(increment());
     };
 
-    handleStoreChange = () => {
+    _handlerStoreChange = () => {
         this.setState({
             counter: store.getState().count
         })
-    };
+    }
 }
